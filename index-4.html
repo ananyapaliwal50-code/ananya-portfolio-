@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ananya | Portfolio</title>
+  <meta name="description" content="Ananya's creative portfolio.">
+  <style>
+    :root {
+      --bg: #09090d;
+      --card: #12121a;
+      --text: #f5f5f7;
+      --muted: #a7a7b5;
+      --accent: #b68cff;
+      --accent2: #6ee7ff;
+      --line: rgba(255,255,255,.1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(182,140,255,.16), transparent 28%),
+        radial-gradient(circle at 10% 40%, rgba(110,231,255,.08), transparent 25%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+      backdrop-filter: blur(14px);
+      background: rgba(9,9,13,.7);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      max-width: 1050px; margin: auto; padding: 18px 24px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .logo { font-weight: 800; letter-spacing: .08em; }
+    .nav-links { display: flex; gap: 22px; color: var(--muted); font-size: .95rem; }
+    .nav-links a:hover { color: var(--text); }
+    section { max-width: 1050px; margin: auto; padding: 100px 24px; }
+    .hero {
+      min-height: 100vh; display: grid; place-items: center;
+      text-align: center; padding-top: 120px;
+    }
+    .eyebrow {
+      display: inline-block; padding: 7px 13px; border: 1px solid var(--line);
+      border-radius: 999px; color: var(--muted); margin-bottom: 22px;
+      background: rgba(255,255,255,.03);
+    }
+    h1 {
+      font-size: clamp(4rem, 12vw, 8rem); line-height: .9;
+      letter-spacing: -.07em;
+      background: linear-gradient(100deg, #fff, var(--accent), var(--accent2));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .hero p { max-width: 620px; margin: 28px auto; color: var(--muted); font-size: 1.15rem; }
+    .buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      padding: 12px 19px; border-radius: 999px; border: 1px solid var(--line);
+      background: rgba(255,255,255,.04); transition: .2s; cursor: pointer;
+    }
+    .btn.primary { background: var(--text); color: var(--bg); border-color: var(--text); }
+    .btn:hover { transform: translateY(-2px); }
+    .section-title { font-size: 2.3rem; margin-bottom: 14px; }
+    .section-intro { color: var(--muted); max-width: 650px; margin-bottom: 34px; }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .card {
+      background: linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border: 1px solid var(--line); border-radius: 24px; padding: 28px;
+      box-shadow: 0 18px 60px rgba(0,0,0,.2);
+    }
+    .icon { font-size: 2rem; margin-bottom: 14px; }
+    .card h3 { margin-bottom: 8px; }
+    .card p { color: var(--muted); }
+    .project {
+      min-height: 230px; display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .tag {
+      display: inline-block; font-size: .8rem; color: var(--accent2);
+      border: 1px solid rgba(110,231,255,.25); padding: 5px 9px; border-radius: 999px;
+    }
+    footer { text-align: center; color: var(--muted); padding: 40px 24px 55px; border-top: 1px solid var(--line); }
+    .reveal { opacity: 0; transform: translateY(18px); transition: .7s ease; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+    @media (max-width: 700px) {
+      .nav-links { gap: 10px; font-size: .82rem; }
+      .grid { grid-template-columns: 1fr; }
+      section { padding: 80px 20px; }
+      .hero { min-height: 92vh; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="#home">ANANYA</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skill</a>
+        <a href="#projects">Projects</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="reveal">
+        <span class="eyebrow">Artist • Dreamer • Creator</span>
+        <h1>Ananya</h1>
+        <p>I love drawing and expressing my creativity through art. Welcome to my little corner of the internet.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#projects">See my work</a>
+          <a class="btn" href="#about">About me</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="reveal">
+        <h2 class="section-title">About me</h2>
+        <p class="section-intro">I'm Ananya, and drawing is one of the ways I enjoy being creative. I'm always learning, experimenting, and working on new ideas.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="reveal">
+        <h2 class="section-title">My skill</h2>
+        <div class="grid">
+          <div class="card">
+            <div class="icon">🎨</div>
+            <h3>Drawing</h3>
+            <p>Creating art, exploring ideas, and bringing imagination to life.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="reveal">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-intro">New creative projects are on the way.</p>
+        <div class="grid">
+          <div class="card project">
+            <div>
+              <span class="tag">Coming soon</span>
+              <h3 style="margin-top:18px;">My first project</h3>
+              <p>I'm currently working on new creative projects. Check back soon to see what I've made!</p>
+            </div>
+            <div style="font-size:2rem; margin-top:20px;">✦</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Made with creativity by Ananya · © <span id="year"></span>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const items = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("show");
+      });
+    }, { threshold: 0.12 });
+    items.forEach(item => observer.observe(item));
+  </script>
+</body>
+</html>
